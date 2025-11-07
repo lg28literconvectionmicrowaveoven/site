@@ -21,6 +21,7 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "bits-ui": "^2.14.2"
+    "bits-ui": "^2.14.2",
+    "phosphor-svelte": "^3.0.1"
   }
 }
