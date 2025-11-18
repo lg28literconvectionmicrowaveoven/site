@@ -8,10 +8,6 @@
   } from "phosphor-svelte";
 </script>
 
-<svelte:head>
-  <title>Sabarigirish Manikandan - Software Developer and Student</title>
-</svelte:head>
-
 <div
   class="flex flex-col justify-center items-center h-screen w-screen bg-gvb-bg"
 >
@@ -67,7 +63,7 @@
             class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
           >
             <p
-              class="text-gvb-white px-1.5 py-2 font-readable-sans break-normal text-center"
+              class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center"
             >
               Developing a complete implementation of <a
                 href="https://github.com/TodePond/GulfOfMexico"
@@ -75,8 +71,7 @@
               >
                 Dreamberd
               </a>, the perfect programming language. Bytecode interpreter shall
-              be written in Rust and VM will be written in C (I am not dealing
-              with manual memory management in Rust).
+              be written in Rust and VM will be written in Zig.
             </p>
           </div>
         </div>
@@ -93,7 +88,7 @@
             class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
           >
             <p
-              class="text-gvb-white px-1.5 py-2 font-readable-sans break-normal text-center"
+              class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center"
             >
               An on-site system that accurately gauges crowd levels using audio
               cues, and Random Forest and LSTM, all done locally on a Raspberry
@@ -114,9 +109,7 @@
           <div
             class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
           >
-            <div
-              class="text-gvb-white px-1.5 py-2 font-readable-sans break-normal"
-            >
+            <div class="text-gvb-white px-1.5 py-2 font-sans break-normal">
               <ul class="list-disc ml-4">
                 <li>
                   <a
