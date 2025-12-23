@@ -21,6 +21,7 @@
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "bits-ui": "^2.14.2"
+    "bits-ui": "^2.14.2",
+    "prettier-plugin-svelte": "^3.4.1"
   }
 }

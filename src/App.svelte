@@ -6,6 +6,56 @@
     GithubLogo,
     Envelope,
   } from "phosphor-svelte";
+
+  const projects = [
+    {
+      title: "Unlovable (WIP)",
+      href: "https://github.com/capstone-unlovable",
+      span: "col-span-1",
+      description: `A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph and a janky Tauri app. Currently rewriting in Rust.`,
+    },
+    {
+      title: "Dreamberd (WIP)",
+      href: "https://github.com/dreamberd",
+      span: "col-span-1",
+      description: `Developing a complete implementation of <a href="https://github.com/TodePond/GulfOfMexico" class="underline text-gvb-green hover:text-gvb-yellow italic">Dreamberd</a>, "the perfect programming language". Bytecode interpreter shall be written in Rust and VM will be written in Zig.`,
+    },
+    {
+      title: "Campus Crowd Detection",
+      href: "https://github.com/rohitjg13/Campus-Crowd-Detection",
+      span: "col-span-1",
+      description: `An on-site system that accurately gauges crowd levels using audio cues, and Random Forest and LSTM, all done locally on a Raspberry Pi 5. Training data sourced from simultaneous CV using Ultralytics YOLO.`,
+    },
+    {
+      title: "Open Source Contributor",
+      href: "https://github.com/lg28literconvectionmicrowaveoven",
+      span: "col-span-1",
+      contributions: [
+        {
+          name: "FreeRDP (WIP)",
+          url: "https://github.com/FreeRDP/FreeRDP/issues/7699",
+          description:
+            "Proper HW Decode device enumeration and selection using code from MPV.",
+        },
+        {
+          name: "Ghostty",
+          url: "https://github.com/ghostty-org/ghostty",
+          description:
+            "Contributed to the GPU-accelerated terminal emulator written in Zig.",
+        },
+        {
+          name: "LenovoLegionLinux",
+          url: "https://github.com/johnfanv2/LenovoLegionLinux",
+          description: "Fixed dkms compilation on kernel versions >6.13.",
+        },
+        {
+          name: "MouseTooltipTranslator",
+          url: "https://github.com/ttop32/MouseTooltipTranslator",
+          description: "Fixes for the real-time mouse hover translation tool.",
+        },
+      ],
+    },
+  ];
 </script>
 
 <div
@@ -57,97 +107,54 @@
           Contact
         </Tabs.Trigger>
       </Tabs.List>
+
       <Tabs.Content
         value="projects"
         class="grid grid-cols-1 md:grid-cols-2 w-full gap-2"
       >
-        <div
-          class="border border-gvb-gray max-w-2xl m-auto size-full px-2 md:px-3 py-1 flex flex-col justify-center items-center"
-        >
-          <a
-            class="font-title text-lg md:text-xl text-center px-1 block"
-            href="https://github.com/dreamberd"
-          >
-            Dreamberd (WIP)
-          </a>
+        {#each projects as project}
           <div
-            class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
+            class="border border-gvb-gray w-full h-full px-2 md:px-3 py-1 flex flex-col justify-center items-center {project.span}"
           >
-            <p
-              class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center text-sm md:text-base"
+            <a
+              class="font-title text-lg md:text-xl text-center px-1 block"
+              href={project.href}
             >
-              Developing a complete implementation of <a
-                href="https://github.com/TodePond/GulfOfMexico"
-                class="underline text-gvb-green hover:text-gvb-yellow italic"
-              >
-                Dreamberd
-              </a>, the perfect programming language. Bytecode interpreter shall
-              be written in Rust and VM will be written in Zig.
-            </p>
-          </div>
-        </div>
-        <div
-          class="border border-gvb-gray max-w-2xl m-auto size-full px-2 md:px-3 py-1 flex flex-col justify-center items-center"
-        >
-          <a
-            class="font-title text-lg md:text-xl text-center px-1 block"
-            href="https://github.com/rohitjg13/Campus-Crowd-Detection"
-          >
-            Campus Crowd Detection
-          </a>
-          <div
-            class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
-          >
-            <p
-              class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center text-sm md:text-base"
-            >
-              An on-site system that accurately gauges crowd levels using audio
-              cues, and Random Forest and LSTM, all done locally on a Raspberry
-              Pi 5. Training data sourced from simultaneous CV using Ultralytics
-              YOLO.
-            </p>
-          </div>
-        </div>
-        <div
-          class="border border-gvb-gray max-w-2xl m-auto w-full px-2 md:px-3 py-1 col-span-1 md:col-span-2 flex flex-col justify-center items-center"
-        >
-          <a
-            class="font-title text-lg md:text-xl text-center px-1 block"
-            href="https://github.com/lg28literconvectionmicrowaveoven"
-          >
-            Open Source Contributor
-          </a>
-          <div
-            class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center"
-          >
+              {project.title}
+            </a>
             <div
-              class="text-gvb-white px-1.5 py-2 font-sans break-normal text-sm md:text-base"
+              class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center flex-grow overflow-y-auto"
             >
-              <ul class="list-disc ml-4">
-                <li>
-                  <a
-                    href="https://github.com/ghostty-org/ghostty"
-                    class="text-gvb-green underline italic">Ghostty</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/johnfanv2/LenovoLegionLinux"
-                    class="text-gvb-green underline italic">LenovoLegionLinux</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/ttop32/MouseTooltipTranslator"
-                    class="text-gvb-green underline italic"
-                    >MouseTooltipTranslator</a
-                  >
-                </li>
-              </ul>
+              {#if project.contributions}
+                <div class="flex flex-col gap-3 w-full py-2">
+                  {#each project.contributions as item}
+                    <div class="flex flex-col justify-center items-center">
+                      <a
+                        href={item.url}
+                        class="text-gvb-green underline italic font-bold text-sm md:text-base hover:text-gvb-yellow transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                      <p
+                        class="text-gvb-white text-xs md:text-sm font-sans text-center px-2 opacity-90"
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                  {/each}
+                </div>
+              {:else}
+                <p
+                  class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center text-sm md:text-base"
+                >
+                  {@html project.description}
+                </p>
+              {/if}
             </div>
           </div>
-        </div>
+        {/each}
       </Tabs.Content>
+
       <Tabs.Content
         value="contact"
         class="w-full gap-3 md:gap-4 flex justify-center items-center flex-wrap"
