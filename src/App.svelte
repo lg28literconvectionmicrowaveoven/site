@@ -7,29 +7,34 @@
     Envelope,
   } from "phosphor-svelte";
 
+  const LINKS = {
+    instagram: "https://www.instagram.com/lg28litermicrowaveoven/",
+    linkedin: "https://www.linkedin.com/in/sabarigirish-manikandan-12a90326a/",
+    github: "https://github.com/lg28literconvectionmicrowaveoven",
+    mail: "sabari.girish2057@gmail.com",
+  };
+
   const projects = [
     {
       title: "Unlovable (WIP)",
       href: "https://github.com/capstone-unlovable",
-      span: "col-span-1",
-      description: `A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph and a janky Tauri app. Currently rewriting in Rust.`,
+      description:
+        "A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph and a janky Tauri app. Currently rewriting in Rust.",
     },
     {
       title: "Dreamberd (WIP)",
       href: "https://github.com/dreamberd",
-      span: "col-span-1",
       description: `Developing a complete implementation of <a href="https://github.com/TodePond/GulfOfMexico" class="underline text-gvb-green hover:text-gvb-yellow italic">Dreamberd</a>, "the perfect programming language". Bytecode interpreter shall be written in Rust and VM will be written in Zig.`,
     },
     {
       title: "Campus Crowd Detection",
       href: "https://github.com/rohitjg13/Campus-Crowd-Detection",
-      span: "col-span-1",
-      description: `An on-site system that accurately gauges crowd levels using audio cues, and Random Forest and LSTM, all done locally on a Raspberry Pi 5. Training data sourced from simultaneous CV using Ultralytics YOLO.`,
+      description:
+        "An on-site system that accurately gauges crowd levels using audio cues, and Random Forest and LSTM, all done locally on a Raspberry Pi 5. Training data sourced from simultaneous CV using Ultralytics YOLO.",
     },
     {
       title: "Open Source Contributor",
       href: "https://github.com/lg28literconvectionmicrowaveoven",
-      span: "col-span-1",
       contributions: [
         {
           name: "FreeRDP (WIP)",
@@ -56,6 +61,44 @@
       ],
     },
   ];
+
+  const positions = [
+    {
+      title: "Development Team Member",
+      organization: "SNU GDG",
+      description:
+        "Developed multiple projects and hosted events as a part of SNU GDG's Dev Team, namely: Campus Crowd Detection, ping v3 and v2, and FindMyDate.",
+      current: true,
+    },
+    {
+      title: "Hackdata Tech Lead",
+      organization: "Hackdata",
+      description:
+        "One of the leads in charge of SNU's premier inter-college hackathon. As a tech lead I'm responsible to read and approve applications and act as a liaison to the judges who are to evaluate and choose the winners.",
+      current: true,
+    },
+    {
+      title: "Tech Team Member",
+      organization: "SURGE SNU",
+      description:
+        "Developed a dashboard page and a live-updating scoreboard for SNU's premier inter-college sporting event, SURGE.",
+      current: false,
+    },
+    {
+      title: "Web Development Intern",
+      organization: "NexGen Analytix",
+      description:
+        "Developed a business-facing CRM with student and trainer onboarding, batch/course management, and attendance tracking and querying using Next.js, JWT-based authentication, and PostgreSQL with Prisma; with a focus on scalability and intuitive UX tailored to real-world, case-specific needs.",
+      current: false,
+    },
+    {
+      title: "Machine Learning Intern",
+      organization: "DOT Glasses",
+      description:
+        "Conducted exploratory Data Analysis using various Machine Learning Models and interpreted data and charts to infer trends and suggest future values.",
+      current: false,
+    },
+  ];
 </script>
 
 <div
@@ -76,6 +119,7 @@
       </p>
       <div class="flex-1 h-1.5 md:h-2 bg-gvb-green mt-2"></div>
     </div>
+
     <h2
       class="m-auto text-gvb-white font-sans text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl text-center px-2"
     >
@@ -87,12 +131,13 @@
       GoLang, and Python/FastAPI. I'm currently learning lower level systems
       programming using Rust and C.
     </h2>
+
     <Tabs.Root
       value="projects"
       class="rounded-card border-muted shadow-card border p-2 md:p-3 border-gvb-white text-gvb-white m-auto w-[95%] md:w-[85%] max-w-7xl"
     >
       <Tabs.List
-        class="ml-2 md:ml-6 mb-3 md:mb-4 grid grid-cols-2 gap-3 md:gap-6"
+        class="ml-2 md:ml-6 mb-3 md:mb-4 grid grid-cols-3 gap-3 md:gap-6"
       >
         <Tabs.Trigger
           value="projects"
@@ -101,8 +146,14 @@
           Projects
         </Tabs.Trigger>
         <Tabs.Trigger
+          value="experience"
+          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold w-full m-auto border-r border-gvb-white text-sm md:text-base"
+        >
+          Experience
+        </Tabs.Trigger>
+        <Tabs.Trigger
           value="contact"
-          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold text-sm md:text-base"
+          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold w-full m-auto text-sm md:text-base"
         >
           Contact
         </Tabs.Trigger>
@@ -114,7 +165,7 @@
       >
         {#each projects as project}
           <div
-            class="border border-gvb-gray w-full h-full px-2 md:px-3 py-1 flex flex-col justify-center items-center {project.span}"
+            class="border border-gvb-gray w-full h-full px-2 md:px-3 py-1 flex flex-col justify-center items-center"
           >
             <a
               class="font-title text-lg md:text-xl text-center px-1 block"
@@ -123,7 +174,7 @@
               {project.title}
             </a>
             <div
-              class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center flex-grow overflow-y-auto"
+              class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center grow overflow-y-auto"
             >
               {#if project.contributions}
                 <div class="flex flex-col gap-3 w-full py-2">
@@ -156,20 +207,46 @@
       </Tabs.Content>
 
       <Tabs.Content
+        value="experience"
+        class="grid grid-cols-1 md:grid-cols-2 w-full gap-2"
+      >
+        {#each positions as position}
+          <div
+            class="border border-gvb-gray w-full h-full px-2 md:px-3 py-1 flex flex-col justify-center items-center"
+          >
+            <p class="font-title text-lg md:text-xl text-center px-1 block">
+              {@html `${position.title}${position.current ? " (<span class='text-gvb-aqua'>Current</span>)" : ""}`}
+            </p>
+            <p
+              class="font-title text-lg md:text-s text-center px-1 block text-gvb-gray"
+            >
+              {position.organization}
+            </p>
+            <div
+              class="border-t border-dashed border-gvb-blue mt-1 w-full flex justify-center items-center grow overflow-y-auto"
+            >
+              <p
+                class="text-gvb-white px-1.5 py-2 font-sans break-normal text-center text-sm md:text-base"
+              >
+                {@html position.description}
+              </p>
+            </div>
+          </div>
+        {/each}
+      </Tabs.Content>
+
+      <Tabs.Content
         value="contact"
         class="w-full gap-3 md:gap-4 flex justify-center items-center flex-wrap"
       >
-        <a
-          href="https://www.linkedin.com/in/sabarigirish-manikandan-12a90326a/"
-          class="hover:text-gvb-green transition-colors"
-        >
+        <a href={LINKS.linkedin} class="hover:text-gvb-green transition-colors">
           <LinkedinLogo
             size={40}
             class="text-gvb-white hover:text-gvb-green md:w-12 md:h-12"
           />
         </a>
         <a
-          href="https://www.instagram.com/lg28litermicrowaveoven/"
+          href={LINKS.instagram}
           class="hover:text-gvb-green transition-colors"
         >
           <InstagramLogo
@@ -177,17 +254,14 @@
             class="text-gvb-white hover:text-gvb-green md:w-12 md:h-12"
           />
         </a>
-        <a
-          href="https://github.com/lg28literconvectionmicrowaveoven"
-          class="hover:text-gvb-green transition-colors"
-        >
+        <a href={LINKS.github} class="hover:text-gvb-green transition-colors">
           <GithubLogo
             size={40}
             class="text-gvb-white hover:text-gvb-green md:w-12 md:h-12"
           />
         </a>
         <a
-          href="mailto:sabari.girish2057@gmail.com"
+          href={`mailto:${LINKS.mail}`}
           class="hover:text-gvb-green transition-colors"
           ><Envelope
             size={40}
