@@ -17,9 +17,9 @@
   const projects = [
     {
       title: "Unlovable (WIP)",
-      href: "https://github.com/capstone-unlovable",
+      href: "https://github.com/lg28literconvectionmicrowaveoven/capstone-unlovable",
       description:
-        "A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph and a janky Tauri app. Currently rewriting in Rust.",
+        "A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph + FastAPI local server and a janky Tauri app client, but a Rust rewrite is ongoing to improve UX and reliability by entirely handling project logic and LLM calls via Tauri invokes.",
     },
     {
       title: "Dreamberd (WIP)",
@@ -136,24 +136,24 @@
       value="projects"
       class="rounded-card border-muted shadow-card border p-2 md:p-3 border-gvb-white text-gvb-white m-auto w-[95%] md:w-[85%] max-w-7xl"
     >
-      <Tabs.List
-        class="ml-2 md:ml-6 mb-3 md:mb-4 grid grid-cols-3 gap-3 md:gap-6"
-      >
+      <Tabs.List class="grid grid-cols-3 mb-3 md:mb-4 px-6 md:px-16">
         <Tabs.Trigger
           value="projects"
-          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold w-full m-auto border-r border-gvb-white text-sm md:text-base"
+          class="border-r border-gvb-white px-2 md:px-8 text-center text-sm md:text-base data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold"
         >
           Projects
         </Tabs.Trigger>
+
         <Tabs.Trigger
           value="experience"
-          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold w-full m-auto border-r border-gvb-white text-sm md:text-base"
+          class="border-r border-gvb-white px-2 md:px-8 text-center text-sm md:text-base data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold"
         >
           Experience
         </Tabs.Trigger>
+
         <Tabs.Trigger
           value="contact"
-          class="data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold w-full m-auto text-sm md:text-base"
+          class="px-2 md:px-8 text-center text-sm md:text-base data-[state=active]:text-gvb-green data-[state=active]:underline data-[state=active]:font-bold"
         >
           Contact
         </Tabs.Trigger>
