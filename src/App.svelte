@@ -59,7 +59,7 @@
 </script>
 
 <div
-  class="flex flex-col justify-center items-center min-h-screen w-screen bg-gvb-bg px-4 py-28"
+  class="flex flex-col justify-center items-center min-h-screen w-screen bg-gvb-bg px-4 py-25"
 >
   <div class="flex flex-col gap-4 md:gap-6 w-full">
     <div class="max-w-4xl m-auto w-full">
