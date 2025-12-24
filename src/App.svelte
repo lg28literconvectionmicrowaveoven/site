@@ -14,6 +14,15 @@
     mail: "sabari.girish2057@gmail.com",
   };
 
+  const DESCRIPTION = `
+      I'm a student developer studying at Shiv Nadar University - Delhi NCR with
+      experience in a wide variety of fields from web development to hardware
+      and AI/ML. I have quickly adapted to new tech stacks on-the-fly to deliver
+      on unique sets of requirements. I have experience with React.js/Next.js
+      and Svelte(Kit), and built performant, scalable backends using Rust/Axum,
+      GoLang, and Python/FastAPI. I have also built agentic AI systems using LangChain and LangGraph.
+      I'm currently learning lower level systems programming using Rust and C.`;
+
   const projects = [
     {
       title: "Unlovable (WIP)",
@@ -71,10 +80,10 @@
       current: true,
     },
     {
-      title: "Hackdata Tech Lead",
+      title: "Tech Lead",
       organization: "Hackdata",
       description:
-        "One of the leads in charge of SNU's premier inter-college hackathon. As a tech lead I'm responsible to read and approve applications and act as a liaison to the judges who are to evaluate and choose the winners.",
+        "One of the leads in charge of SNU's premier inter-college hackathon, Hackdata. As a tech lead I'm responsible to read and approve applications and act as a liaison to the judges who are to evaluate and choose the winners.",
       current: true,
     },
     {
@@ -123,13 +132,7 @@
     <h2
       class="m-auto text-gvb-white font-sans text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl text-center px-2"
     >
-      I'm a student developer studying at Shiv Nadar University - Delhi NCR with
-      experience in a wide variety of fields from web development to hardware
-      and AI/ML. I have quickly adapted to new tech stacks on-the-fly to deliver
-      on unique sets of requirements. I have experience with React.js/Next.js
-      and Svelte(Kit), and built performant, scalable backends using Rust/Axum,
-      GoLang, and Python/FastAPI. I'm currently learning lower level systems
-      programming using Rust and C.
+      {DESCRIPTION}
     </h2>
 
     <Tabs.Root
