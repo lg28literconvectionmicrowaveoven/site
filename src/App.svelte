@@ -28,7 +28,7 @@
       title: "Unlovable (WIP)",
       href: "https://github.com/lg28literconvectionmicrowaveoven/capstone-unlovable",
       description:
-        "A completely local clone of unlovable that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph + FastAPI local server and a janky Tauri app client, but a Rust rewrite is ongoing to improve UX and reliability by entirely handling project logic and LLM calls via Tauri invokes.",
+        "A completely local clone of lovable.dev that builds a deployment-ready NextJS application with solely text prompts and using any AI models of your choosing (including your local Ollama cluster). No coding knowledge required. Currently works off LangGraph + FastAPI local server and a Tauri app client, but a rewrite using GPUI and Rust is ongoing.",
     },
     {
       title: "Dreamberd (WIP)",
