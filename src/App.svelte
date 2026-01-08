@@ -83,7 +83,7 @@
       title: "Tech Lead",
       organization: "Hackdata",
       description:
-        "One of the leads in charge of SNU's premier inter-college hackathon, Hackdata. As a tech lead I'm responsible to read and approve applications and act as a liaison to the judges who are to evaluate and choose the winners.",
+        `One of the leads in charge of SNU's premier inter-college hackathon, Hackdata. As a tech lead I'm responsible to read and approve applications and act as a liaison to the judges who are to evaluate and choose the winners. Developed <a class='underline text-gvb-green hover:text-gvb-yellow italic' href='https://hackdata.in'>hackdata.in</a> using SvelteKit and deployed on Vercel.`,
       current: true,
     },
     {
