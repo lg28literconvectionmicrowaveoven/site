@@ -49,7 +49,7 @@
           name: "FreeRDP (WIP)",
           url: "https://github.com/FreeRDP/FreeRDP/issues/7699",
           description:
-            "Proper HW Decode device enumeration and selection using code from MPV.",
+            "Proper HW device enumeration and selection.",
         },
         {
           name: "Ghostty",
