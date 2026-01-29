@@ -115,7 +115,7 @@
 >
   <div class="flex flex-col gap-4 md:gap-6 w-full">
     <div class="max-w-4xl m-auto w-full">
-      <div class="flex-1 h-1.5 md:h-2 bg-gvb-yellow mb-2"></div>
+      <div class="flex-1 h-1.5 md:h-2 bg-gvb-blue mb-2"></div>
       <h1
         class="m-auto text-gvb-white font-huge text-3xl sm:text-4xl md:text-5xl lg:text-6xl pl-2 md:pl-4 text-center leading-tight"
       >
