@@ -81,7 +81,7 @@
 		{
 			title: 'Paper Co-Author',
 			organization: 'ISDD - 2026/BITS Pilani/MoYAS',
-			description: `Co-Authored the paper <a href='/paper.pdf'>'Beyond Copyright Enforcement - Technological Protection Measures and User Rights in India'</a> which was selected to be presented at the three-day International Seminar on Digital Dreamscapes. The paper involves extensive research regarding copyright measures in software, their usages, and various cases advocating for lawful jailbreaking.`
+			description: `Co-Authored the paper <a href='/paper.pdf' class="underline text-gvb-green hover:text-gvb-yellow italic">'Beyond Copyright Enforcement - Technological Protection Measures and User Rights in India'</a> which was selected to be presented at the three-day International Seminar on Digital Dreamscapes. The paper involves extensive research regarding copyright measures in software, their usages, and various cases advocating for lawful jailbreaking.`
 		},
 		{
 			title: 'Tech Team Member',
